@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayoub Ahajji | E-Commerce Spezialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* A very light gray background */
+        }
+        .bg-gradient-custom {
+            background: radial-gradient(circle at top left, #e0f2fe, #f8fafc 70%);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #0ea5e9; /* A nice blue for timeline dots */
+            border: 2px solid #fff;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glassmorphism shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-slate-900">Ayoub Ahajji</h1>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#experience" class="text-slate-600 hover:text-sky-600 transition-colors">Erfahrung</a>
+                <a href="#education" class="text-slate-600 hover:text-sky-600 transition-colors">Bildung</a>
+                <a href="#skills" class="text-slate-600 hover:text-sky-600 transition-colors">Kompetenzen</a>
+                <a href="#contact" class="bg-sky-500 text-white px-4 py-2 rounded-full hover:bg-sky-600 transition-colors">Kontakt</a>
+            </nav>
+            <div class="md:hidden">
+                <a href="#contact" class="bg-sky-500 text-white px-4 py-2 rounded-full hover:bg-sky-600 transition-colors text-sm">Kontakt</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="bg-gradient-custom py-20 md:py-32">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex flex-col items-start space-y-6">
+                    <img src="https://placehold.co/120x120/e0f2fe/333?text=AA" alt="Ayoub Ahajji Profilbild" class="rounded-full w-28 h-28 md:w-32 md:h-32 border-4 border-white shadow-lg">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+                        Ambitionierter E-Commerce Spezialist
+                    </h2>
+                    <p class="text-slate-600 max-w-xl text-lg">
+                        Nachweisliche Erfolgsbilanz im Aufbau eines internationalen Online-Handels mit 400.000 $ Umsatz. Motiviert, meine praktischen Fähigkeiten durch eine Ausbildung zum Kaufmann für E-Commerce in Deutschland zu untermauern.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="mailto:ayoubahajji@outlook.com" class="inline-flex items-center gap-2 bg-sky-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-sky-600 transition-all shadow-lg">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                            E-Mail Senden
+                        </a>
+                        <a href="tel:+21291668947" class="inline-flex items-center gap-2 bg-white text-slate-700 px-6 py-3 rounded-full font-semibold hover:bg-slate-100 transition-all shadow-lg border border-slate-200">
+                             <i data-lucide="phone" class="w-5 h-5"></i>
+                            Anrufen
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <!-- Custom Illustration SVG -->
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#0ea5e9" d="M48.1,-71.4C62.5,-61,74.5,-46.5,79.9,-29.8C85.3,-13.1,84.1,5.8,77.8,22.1C71.5,38.4,60.1,52.1,46.1,62.1C32.1,72.1,15.5,78.5,-1.2,79.5C-17.9,80.5,-35.8,76.2,-50.2,66.8C-64.6,57.5,-75.6,43.2,-80.4,26.9C-85.2,10.7,-83.8,-7.4,-76.9,-22.4C-70,-37.4,-57.6,-49.2,-44.1,-58.5C-30.6,-67.8,-15.9,-74.6,0.1,-75.1C16.2,-75.7,33.7,-81.8,48.1,-71.4Z" transform="translate(100 100)" />
+                        <text x="70" y="105" font-family="Inter, sans-serif" font-size="12" fill="#fff" font-weight="bold">Umsatz</text>
+                        <text x="65" y="125" font-family="Inter, sans-serif" font-size="12" fill="#fff" font-weight="bold">$400k</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-12">Berufserfahrung</h3>
+                <div class="max-w-3xl mx-auto relative border-l-2 border-slate-200 pl-8 space-y-12">
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <p class="text-sm font-medium text-sky-600">2023 - heute</p>
+                        <h4 class="text-xl font-bold mt-1">Gründer & Geschäftsführer</h4>
+                        <p class="text-slate-500 font-medium">E-Commerce-Unternehmen | GCC-Region</p>
+                        <ul class="mt-4 space-y-2 list-disc list-inside text-slate-600">
+                            <li>Aufbau und Skalierung einer E-Commerce-Plattform auf 400.000 $ Umsatz.</li>
+                            <li>Ganzheitliche Verwaltung der Geschäftsabläufe: Produktbeschaffung, Marketing, Logistik und Finanzaufsicht.</li>
+                            <li>Entwicklung effektiver Verkaufstrichter und Marketingkampagnen für den GCC-Markt.</li>
+                            <li>Aufbau internationaler Lieferantenbeziehungen durch Geschäftsreisen nach China, Malaysia und Thailand.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <p class="text-sm font-medium text-sky-600">2023</p>
+                        <h4 class="text-xl font-bold mt-1">IT-Support-Techniker</h4>
+                        <p class="text-slate-500 font-medium">Lear Corporation | Meknes, Marokko</p>
+                        <ul class="mt-4 space-y-2 list-disc list-inside text-slate-600">
+                            <li>Technischer IT-Support in einer Fabrik für Automobilkabeltests.</li>
+                            <li>Schnelle Lösung von System- und Hardwareproblemen zur Sicherstellung ununterbrochener Produktion.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-12">Bildung</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    
+                    <!-- Education Card 1 -->
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <p class="text-sm font-medium text-slate-500">2023 - 2024</p>
+                        <h4 class="text-lg font-bold mt-2">Zhejiang University</h4>
+                        <p class="mt-1 text-sky-700 font-semibold">Chinesisches Sprach- & Kulturprogramm</p>
+                        <p class="mt-2 text-sm text-slate-600">Erwerb von Mandarin-Kenntnissen zur Verbesserung interkultureller Kommunikationsfähigkeiten.</p>
+                    </div>
+
+                    <!-- Education Card 2 -->
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <p class="text-sm font-medium text-slate-500">2020 - 2022</p>
+                        <h4 class="text-lg font-bold mt-2">ISTAG BAB TIZIMI</h4>
+                        <p class="mt-1 text-sky-700 font-semibold">Postgraduierten-Diplom in Informationstechnologie</p>
+                         <p class="mt-2 text-sm text-slate-600">Fokus auf den gesamten Softwareentwicklungszyklus, von Anforderungsanalyse bis Support.</p>
+                    </div>
+
+                    <!-- Education Card 3 -->
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <p class="text-sm font-medium text-slate-500">2017 - 2020</p>
+                        <h4 class="text-lg font-bold mt-2">Marokkanisches Baccalauréat</h4>
+                        <p class="mt-1 text-sky-700 font-semibold">(vergleichbar mit dem deutschen Abitur)</p>
+                        <p class="mt-2 text-sm text-slate-600">Allgemeine Hochschulreife, Abschluss in Marokko.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Awards Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-start">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-8">Kompetenzen</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="flex items-center gap-3"><i data-lucide="bar-chart-2" class="w-6 h-6 text-sky-500"></i><span>Vertrieb & Marketing</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="briefcase" class="w-6 h-6 text-sky-500"></i><span>Geschäftsentwicklung</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="mouse-pointer-click" class="w-6 h-6 text-sky-500"></i><span>Digitales Marketing</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="shopping-cart" class="w-6 h-6 text-sky-500"></i><span>E-Commerce-Betrieb</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="search" class="w-6 h-6 text-sky-500"></i><span>Marktanalyse</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="users" class="w-6 h-6 text-sky-500"></i><span>CRM</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="dollar-sign" class="w-6 h-6 text-sky-500"></i><span>Finanzmanagement</span></div>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="text-3xl font-bold mb-8">Auszeichnungen</h3>
+                        <div class="bg-white p-6 rounded-lg shadow-md border border-slate-100">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-sky-100 p-3 rounded-full">
+                                    <i data-lucide="award" class="w-6 h-6 text-sky-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-slate-500">Januar 2024</p>
+                                    <h4 class="text-lg font-bold">Top-Verkäufer-Auszeichnung</h4>
+                                    <p class="text-slate-600 mt-1">Verliehen von YouCan für die Generierung von 20.000 Leads beim größten E-Commerce-Event Marokkos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="py-20 bg-white">
+             <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-12">Sprachen</h3>
+                <div class="flex flex-wrap justify-center gap-6 text-center max-w-4xl mx-auto">
+                    <div class="bg-slate-100 px-6 py-3 rounded-full font-medium">Arabisch (Muttersprache)</div>
+                    <div class="bg-slate-100 px-6 py-3 rounded-full font-medium">Französisch (Fließend)</div>
+                    <div class="bg-slate-100 px-6 py-3 rounded-full font-medium">Englisch (Fließend)</div>
+                    <div class="bg-slate-100 px-6 py-3 rounded-full font-medium">Deutsch (B1)</div>
+                    <div class="bg-slate-100 px-6 py-3 rounded-full font-medium">Chinesisch (Grundlagen)</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-900 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold">Kontaktieren Sie mich</h3>
+            <p class="text-slate-400 mt-4 max-w-lg mx-auto">Ich freue mich darauf, von Ihnen zu hören und mehr über eine mögliche Zusammenarbeit zu erfahren.</p>
+            <div class="mt-8">
+                 <a href="mailto:ayoubahajji@outlook.com" class="text-sky-400 text-xl font-semibold hover:text-sky-300 transition-colors">ayoubahajji@outlook.com</a>
+                 <p class="text-slate-400 mt-2">+212 91668947</p>
+                 <p class="text-slate-400 mt-1">Meknes, Marokko</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
