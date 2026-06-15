@@ -1077,6 +1077,86 @@
             flex-shrink: 0;
         }
 
+        /* TESTIMONIAL */
+        .testimonial-section {
+            background: var(--white);
+            padding: 5rem 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .testimonial-card {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            border-color: var(--gray-400);
+        }
+        .testimonial-card::before {
+            content: '“';
+            position: absolute;
+            top: 10px;
+            left: 25px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 8rem;
+            color: var(--gray-200);
+            line-height: 1;
+            opacity: 0.3;
+        }
+        .testimonial-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold-border);
+            flex-shrink: 0;
+            z-index: 1;
+        }
+        .testimonial-content {
+            z-index: 1;
+        }
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--gray-800);
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+        .testimonial-author h4 {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--black);
+            margin-bottom: 0.1rem;
+        }
+        .testimonial-author p {
+            font-size: 0.75rem;
+            color: var(--gray-400);
+            font-weight: 500;
+        }
+        @media (max-width: 650px) {
+            .testimonial-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1.5rem;
+                gap: 1.2rem;
+            }
+            .testimonial-card::before {
+                left: 50%;
+                transform: translateX(-50%);
+                top: -10px;
+            }
+        }
+
         /* RESPONSIVE */
         @media (max-width: 900px) {
             .menu-toggle {
@@ -1513,6 +1593,28 @@
         </div>
     </section>
 
+    <!-- TESTIMONIAL -->
+    <section id="empfehlung" class="testimonial-section">
+        <div class="inner">
+            <div class="eyebrow">Referenzen</div>
+            <h2 class="section-title">Was Partner &amp; Mentoren sagen.</h2>
+            <p class="section-sub">Offizielle Anerkennung von Führungskräften der Branche.</p>
+
+            <div class="testimonial-card">
+                <img src="ceo_youcan.png" alt="Mohamed El Ghaissani" class="testimonial-photo">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        "Ayoub Ahajji gehört zu den talentiertesten E-Commerce-Unternehmern, die unsere Plattform genutzt haben. Seine Fähigkeit, einen Shop eigenständig auf über $500.000 Umsatz zu skalieren, zeugt von außergewöhnlichem Ehrgeiz, technischem Verständnis und exzellentem Marketing-Geschick. Er wird für jedes Unternehmen in Deutschland eine enorme Bereicherung sein."
+                    </p>
+                    <div class="testimonial-author">
+                        <h4>Mohamed El Ghaissani</h4>
+                        <p>CEO &amp; Co-Founder von YouCan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- KENNTNISSE -->
     <section id="kenntnisse" class="skills-bg">
         <div class="inner">
@@ -1523,31 +1625,26 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">🛒</div>
-                    <h3>E-Commerce & Shop-Skalierung</h3>
-                    <p>Eigenständiger Aufbau auf $500K+ Umsatz. YouCan-Plattform, COD-Abwicklung in der GCC-Region.</p>
+                    <h3>E-Commerce &amp; Shop-Skalierung</h3>
+                    <p>Eigenständiger Aufbau auf $500K+ Umsatz. Shopify &amp; YouCan-Plattformen, COD-Abwicklung in der GCC-Region.</p>
                     <div class="tags">
-                        <span class="tag">YouCan</span><span class="tag">COD</span><span class="tag">GCC</span><span
-                            class="tag">Skalierung</span>
+                        <span class="tag">Shopify</span><span class="tag">YouCan</span><span class="tag">COD</span><span class="tag">DTC</span><span class="tag">Admin Panel</span><span class="tag">Skalierung</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">📢</div>
                     <h3>Performance Marketing</h3>
-                    <p>113 Kampagnen auf TikTok Ads Manager. $59.000+ Werbebudget eigenverantwortlich. Snapchat Ads für
-                        Lead-Generierung.</p>
+                    <p>113 Kampagnen auf TikTok, Meta Ads (Facebook/Instagram) &amp; Snapchat. Über $59.000 Werbebudget eigenverantwortlich gesteuert.</p>
                     <div class="tags">
-                        <span class="tag">TikTok Ads</span><span class="tag">Snapchat</span><span
-                            class="tag">Lead-Gen</span>
+                        <span class="tag">Meta Ads Manager</span><span class="tag">TikTok Ads</span><span class="tag">Snapchat Ads</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🚢</div>
-                    <h3>Supply Chain & Logistik</h3>
-                    <p>Koordination der gesamten Logistikkette inkl. Zollabwicklung und Versandsteuerung in der
-                        GCC-Region.</p>
+                    <h3>Supply Chain &amp; Logistik</h3>
+                    <p>Koordination der gesamten Logistikkette inkl. Zollabwicklung und Versandsteuerung in der GCC- &amp; KSA-Region.</p>
                     <div class="tags">
-                        <span class="tag">Import/Export</span><span class="tag">Zoll</span><span
-                            class="tag">Versand</span>
+                        <span class="tag">Import/Export</span><span class="tag">Zoll</span><span class="tag">Versand</span><span class="tag">GCC</span><span class="tag">KSA</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -1571,12 +1668,19 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">📊</div>
-                    <h3>Datenanalyse & KPIs</h3>
-                    <p>Kampagnen-Auswertung, Umsatz-Tracking und KPI-Monitoring zur Optimierung von Budget und
-                        Conversion.</p>
+                    <h3>Datenanalyse &amp; KPIs</h3>
+                    <p>Umfassende Kampagnen-Auswertung, Tracking-Einrichtung und Conversion-Optimierung mit Google Analytics &amp; Pixel-Technologien.</p>
                     <div class="tags">
-                        <span class="tag">KPI-Tracking</span><span class="tag">Conversion</span><span
+                        <span class="tag">Google Analytics</span><span class="tag">Pixel-Tracking</span><span class="tag">KPIs</span><span
                             class="tag">Reporting</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Full-Stack &amp; AI-gestützte Entwicklung</h3>
+                    <p>Entwicklung von Webshops mit Django (Python), Node.js und OpenAI Codex. RTL-Lokalisierung (Arabisch) &amp; WhatsApp COD-Integrationen.</p>
+                    <div class="tags">
+                        <span class="tag">Django</span><span class="tag">Python</span><span class="tag">Node.js</span><span class="tag">OpenAI Codex</span><span class="tag">RTL / KSA</span><span class="tag">Arabic</span>
                     </div>
                 </div>
             </div>
@@ -1591,7 +1695,33 @@
             <p class="section-sub">Keine Behauptungen — echte Kampagnen, echte Zahlen, echte Auszeichnungen.</p>
 
             <div class="portfolio-grid">
-                <!-- 1. YouCan 500K Award -->
+                <!-- 1. هَوْن — DTC E-Commerce Store -->
+                <div class="portfolio-card">
+                    <div class="portfolio-screen">
+                        <img src="portfolio_hawn.png" alt="هَوْن — DTC E-Commerce Store" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="portfolio-body">
+                        <div class="portfolio-platform">Eigenentwicklung &bull; Live-Projekt</div>
+                        <h3>هَوْن — DTC E-Commerce Store (KSA)</h3>
+                        <p>Entwicklung eines vollständigen DTC-Webshops für den saudi-arabischen Markt. Frontend mit HTML/CSS, Backend mit Django (Python) &amp; Node.js. KI-gestützte Entwicklung mit OpenAI Codex. COD-Checkout mit WhatsApp-Bestätigung, Admin-Panel und vollständige Produktverwaltung.</p>
+                        <div class="portfolio-metrics">
+                            <div class="pm">
+                                <div class="pm-n">Django/Node</div>
+                                <div class="pm-l">Backend</div>
+                            </div>
+                            <div class="pm">
+                                <div class="pm-n">RTL / KSA</div>
+                                <div class="pm-l">Markt</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                            <a href="https://newromaticos.online/" target="_blank" class="btn btn-ghost" style="font-size: 0.75rem; padding: 0.4rem 0.8rem; flex: 1; justify-content: center;" onclick="event.stopPropagation();">Website ↗</a>
+                            <a href="https://github.com/ayoubahajji/HAWN-BRAND" target="_blank" class="btn btn-dark" style="font-size: 0.75rem; padding: 0.4rem 0.8rem; flex: 1; justify-content: center;" onclick="event.stopPropagation();">💻 GitHub ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. YouCan 500K Award -->
                 <div class="portfolio-card">
                     <div class="portfolio-screen">
                         <img src="portfolio youcan1.png" alt="YouCan 500K Award" style="width:100%;height:100%;object-fit:cover;">
@@ -1846,15 +1976,20 @@
                         <span class="contact-link-icon">✉️</span>
                         <div><span class="contact-link-label">E-Mail</span>contact@ayoubahajji.online</div>
                     </a>
-                    <a href="tel:+212691668947" class="contact-link">
-                        <span class="contact-link-icon">📞</span>
-                        <div><span class="contact-link-label">Telefon / WhatsApp</span>+212 691 668 947</div>
-                    </a>
+
                     <div class="contact-link" style="cursor:default;">
                         <span class="contact-link-icon">📍</span>
                         <div><span class="contact-link-label">Standort</span>Meknes, Marokko — umzugsbereit nach
                             Deutschland</div>
                     </div>
+                    <a href="https://www.linkedin.com/in/ayoub-ahajji-138175346/" target="_blank" class="contact-link">
+                        <span class="contact-link-icon">🔗</span>
+                        <div><span class="contact-link-label">LinkedIn</span>linkedin.com/in/ayoub-ahajji-138175346/</div>
+                    </a>
+                    <a href="https://github.com/ayoubahajji" target="_blank" class="contact-link">
+                        <span class="contact-link-icon">💻</span>
+                        <div><span class="contact-link-label">GitHub</span>github.com/ayoubahajji</div>
+                    </a>
                     <a href="Bewerbungsmappe_Ahajji.pdf" download class="contact-link">
                         <span class="contact-link-icon">📄</span>
                         <div><span class="contact-link-label">Download</span>Vollständige Bewerbungsmappe (PDF)</div>
@@ -1889,9 +2024,10 @@
     <!-- FOOTER -->
     <footer>
         <div><strong>Ayoub Ahajji</strong> · Kaufmann im E-Commerce · Meknes, Marokko</div>
-        <div style="display:flex;gap:1.5rem;">
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
             <a href="mailto:contact@ayoubahajji.online">contact@ayoubahajji.online</a>
-            <a href="tel:+212691668947">+212 691 668 947</a>
+            <a href="https://www.linkedin.com/in/ayoub-ahajji-138175346/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/ayoubahajji" target="_blank">GitHub</a>
         </div>
     </footer>
 
