@@ -64,11 +64,18 @@
             allowfullscreen></iframe>
           <div class="hero-media-vignette" aria-hidden="true"></div>
         </div>
-        <button class="video-toggle" type="button" aria-pressed="false" aria-controls="hero-video">
-          <svg class="pause-icon" aria-hidden="true" viewBox="0 0 20 20"><path d="M6.5 4.5v11m7-11v11"/></svg>
-          <svg class="play-icon" aria-hidden="true" viewBox="0 0 20 20"><path d="m7 5 8 5-8 5Z"/></svg>
-          <span>Video pausieren</span>
-        </button>
+        <div class="video-controls">
+          <button class="media-control sound-toggle" type="button" aria-pressed="false" aria-controls="hero-video">
+            <svg class="sound-on-icon" aria-hidden="true" viewBox="0 0 20 20"><path d="M4 8h3l4-3v10l-4-3H4Zm10-1.5a5 5 0 0 1 0 7m2-9a8 8 0 0 1 0 11"/></svg>
+            <svg class="sound-off-icon" aria-hidden="true" viewBox="0 0 20 20"><path d="M4 8h3l4-3v10l-4-3H4Zm10-.5 4 5m0-5-4 5"/></svg>
+            <span>Ton einschalten</span>
+          </button>
+          <button class="media-control video-toggle" type="button" aria-pressed="false" aria-controls="hero-video">
+            <svg class="pause-icon" aria-hidden="true" viewBox="0 0 20 20"><path d="M6.5 4.5v11m7-11v11"/></svg>
+            <svg class="play-icon" aria-hidden="true" viewBox="0 0 20 20"><path d="m7 5 8 5-8 5Z"/></svg>
+            <span>Video pausieren</span>
+          </button>
+        </div>
       </div>
 
       <a class="hero-scroll" href="#ueber-mich" aria-label="Zum Abschnitt Über mich">
@@ -104,9 +111,10 @@
   </footer>
   <script>
     const videoToggle = document.querySelector('.video-toggle');
+    const soundToggle = document.querySelector('.sound-toggle');
     const heroVideo = document.querySelector('#hero-video');
 
-    if (videoToggle && heroVideo) {
+    if (videoToggle && soundToggle && heroVideo) {
       const videoId = heroVideo.dataset.videoId;
       const isHostedPage = ['http:', 'https:'].includes(window.location.protocol);
 
@@ -126,20 +134,39 @@
         heroVideo.src = `https://www.youtube.com/embed/${videoId}?${playerParams}`;
       } else {
         videoToggle.hidden = true;
+        soundToggle.hidden = true;
       }
+
+      const sendPlayerCommand = (func, args = []) => {
+        heroVideo.contentWindow?.postMessage(JSON.stringify({
+          event: 'command',
+          func,
+          args
+        }), 'https://www.youtube.com');
+      };
 
       videoToggle.addEventListener('click', () => {
         const paused = videoToggle.getAttribute('aria-pressed') === 'true';
         const command = paused ? 'playVideo' : 'pauseVideo';
 
-        heroVideo.contentWindow?.postMessage(JSON.stringify({
-          event: 'command',
-          func: command,
-          args: []
-        }), 'https://www.youtube.com');
+        sendPlayerCommand(command);
 
         videoToggle.setAttribute('aria-pressed', String(!paused));
         videoToggle.querySelector('span').textContent = paused ? 'Video pausieren' : 'Video abspielen';
+      });
+
+      soundToggle.addEventListener('click', () => {
+        const soundOn = soundToggle.getAttribute('aria-pressed') === 'true';
+
+        if (soundOn) {
+          sendPlayerCommand('mute');
+        } else {
+          sendPlayerCommand('unMute');
+          sendPlayerCommand('setVolume', [100]);
+        }
+
+        soundToggle.setAttribute('aria-pressed', String(!soundOn));
+        soundToggle.querySelector('span').textContent = soundOn ? 'Ton einschalten' : 'Ton ausschalten';
       });
     }
   </script>
