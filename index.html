@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Ayoub Ahajji - Bewerber für eine IHK-Ausbildung oder berufliche Position im E-Commerce, Online-Marketing und digitalen Prozessen.">
-  <title>Ayoub Ahajji - E-Commerce & digitale Prozesse</title>
+  <title>Ayoub Ahajji - E-Commerce &amp; digitale Prozesse</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home">
   <nav>
     <a class="nav-logo" href="/">Ayoub Ahajji</a>
     <ul class="nav-links">
@@ -22,41 +22,58 @@
   </nav>
 
   <main>
-    <section class="hero shell">
-      <div>
-        <h1>Zwei Wege.<br>Ein praktisches Profil.</h1>
+    <section class="hero hero-cinematic">
+      <div class="hero-copy">
+        <h1>Zwei Wege.<br>Ein praktisches <em>Profil.</em></h1>
         <p class="hero-sub">Ich bin Ayoub Ahajji aus Meknes, Marokko. Mit IT-Hintergrund, <strong>Goethe-Zertifikat B2</strong> und praktischer Erfahrung in E-Commerce-Prozessen suche ich den nächsten Schritt in Deutschland.</p>
-        <div class="choice-grid">
-          <a class="choice-card" href="ausbildung/">
-            <span class="choice-mark">⌁</span>
-            <h2>Ich suche eine Ausbildung</h2>
-            <p>Ich möchte praktische Erfahrung durch eine strukturierte IHK-Ausbildung im Bereich E-Commerce oder Digitalisierung fachlich vertiefen.</p>
-            <span class="choice-link">Zur Ausbildungsseite →</span>
-          </a>
-          <a class="choice-card" href="beruf/">
-            <span class="choice-mark">↗</span>
-            <h2>Ich suche eine berufliche Position</h2>
-            <p>Ich möchte Teams im E-Commerce, Online-Marketing oder Shop Operations mit einer hands-on Arbeitsweise unterstützen.</p>
-            <span class="choice-link">Zur Berufseite →</span>
-          </a>
+
+        <div class="hero-choices" aria-label="Karrierewege">
+          <div class="hero-choice">
+            <p>Ich suche eine Ausbildung</p>
+            <a href="ausbildung/">Zur Ausbildungsseite
+              <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4 10h11m-4-4 4 4-4 4"/></svg>
+            </a>
+          </div>
+          <div class="hero-choice">
+            <p>Ich suche eine berufliche Position</p>
+            <a href="beruf/">Zur Berufseite
+              <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4 10h11m-4-4 4 4-4 4"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-profile">
+          <img src="ayoubahajjji.png" alt="Ayoub Ahajji">
+          <div>
+            <strong>Ayoub Ahajji</strong>
+            <span>Meknes, Marokko</span>
+            <span class="hero-status">Offen für passende Möglichkeiten</span>
+          </div>
         </div>
       </div>
 
-      <aside>
-        <div class="profile-card">
-          <img class="profile-photo" src="ayoubahajjji.png" alt="Ayoub Ahajji">
-          <div>
-            <h2>Ayoub Ahajji</h2>
-            <p>Meknes, Marokko<br>Deutschlandweit mobil bei passender Zusage</p>
-            <span class="profile-status">Offen für passende Möglichkeiten</span>
-          </div>
+      <div class="hero-media-wrap">
+        <div class="hero-media">
+          <iframe
+            id="hero-video"
+            src="about:blank"
+            data-video-id="lJ8lAORWwvw"
+            title="Vorstellungsvideo von Ayoub Ahajji"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+          <div class="hero-media-vignette" aria-hidden="true"></div>
         </div>
-        <div class="profile-details">
-          <div class="detail-line"><span class="detail-dot"></span>Goethe-Zertifikat B2</div>
-          <div class="detail-line"><span class="detail-dot"></span>IT-Hintergrund: Softwareentwicklung</div>
-          <div class="detail-line"><span class="detail-dot"></span>Praxis: E-Commerce und digitale Prozesse</div>
-        </div>
-      </aside>
+        <button class="video-toggle" type="button" aria-pressed="false" aria-controls="hero-video">
+          <svg class="pause-icon" aria-hidden="true" viewBox="0 0 20 20"><path d="M6.5 4.5v11m7-11v11"/></svg>
+          <svg class="play-icon" aria-hidden="true" viewBox="0 0 20 20"><path d="m7 5 8 5-8 5Z"/></svg>
+          <span>Video pausieren</span>
+        </button>
+      </div>
+
+      <a class="hero-scroll" href="#ueber-mich" aria-label="Zum Abschnitt Über mich">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 9 7 7 7-7"/></svg>
+      </a>
     </section>
 
     <section id="ueber-mich" class="band">
@@ -71,7 +88,7 @@
             <p>Ich bringe eine ruhige, lernorientierte Arbeitsweise mit und möchte langfristig in Deutschland Verantwortung im kaufmännisch-digitalen Bereich übernehmen.</p>
           </div>
           <div class="skill-list">
-            <article class="skill-item"><h3>IT & Digital</h3><p>Softwareentwicklung, IT-Support und ein strukturiertes Verständnis für digitale Systeme.</p></article>
+            <article class="skill-item"><h3>IT &amp; Digital</h3><p>Softwareentwicklung, IT-Support und ein strukturiertes Verständnis für digitale Systeme.</p></article>
             <article class="skill-item"><h3>E-Commerce</h3><p>Shop-Prozesse, Produktdaten, Angebotsstruktur und Kundenkommunikation.</p></article>
             <article class="skill-item"><h3>Kommunikation</h3><p>Arabisch, Französisch und Englisch auf hohem Niveau; Deutsch B2.</p></article>
             <article class="skill-item"><h3>Lernbereitschaft</h3><p>Ich arbeite zuverlässig, frage nach und entwickle mich kontinuierlich weiter.</p></article>
@@ -85,5 +102,46 @@
     <span>© 2026 Ayoub Ahajji</span>
     <a href="mailto:contact@ayoubahajji.online">contact@ayoubahajji.online</a>
   </footer>
+  <script>
+    const videoToggle = document.querySelector('.video-toggle');
+    const heroVideo = document.querySelector('#hero-video');
+
+    if (videoToggle && heroVideo) {
+      const videoId = heroVideo.dataset.videoId;
+      const isHostedPage = ['http:', 'https:'].includes(window.location.protocol);
+
+      if (isHostedPage && videoId) {
+        const playerParams = new URLSearchParams({
+          autoplay: '1',
+          mute: '1',
+          loop: '1',
+          playlist: videoId,
+          controls: '0',
+          rel: '0',
+          playsinline: '1',
+          enablejsapi: '1',
+          origin: window.location.origin
+        });
+
+        heroVideo.src = `https://www.youtube.com/embed/${videoId}?${playerParams}`;
+      } else {
+        videoToggle.hidden = true;
+      }
+
+      videoToggle.addEventListener('click', () => {
+        const paused = videoToggle.getAttribute('aria-pressed') === 'true';
+        const command = paused ? 'playVideo' : 'pauseVideo';
+
+        heroVideo.contentWindow?.postMessage(JSON.stringify({
+          event: 'command',
+          func: command,
+          args: []
+        }), 'https://www.youtube.com');
+
+        videoToggle.setAttribute('aria-pressed', String(!paused));
+        videoToggle.querySelector('span').textContent = paused ? 'Video pausieren' : 'Video abspielen';
+      });
+    }
+  </script>
 </body>
 </html>
